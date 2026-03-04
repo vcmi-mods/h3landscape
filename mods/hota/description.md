@@ -1,0 +1,3 @@
+# english
+
+HotA compatibility

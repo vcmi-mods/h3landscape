@@ -1,0 +1,108 @@
+{	
+	"name" : "H3Landscape - HotA",
+	"version" : "1.0",
+	"author" : "Paracelsus83",
+	"contact" : "https://github.com/Paracelsus83/H3Landscape",
+	"modType" : "Compatibility",
+	"depends" : ["hota.wastelandterrain", "hota.highlandsterrain", "hota.terrainoverlays", "hota.bulwark", "hota.cove", "hota.factory"],
+	"licenseName" : "MIT (only non OH3 assets)",
+	"licenseURL" : "https://github.com/Paracelsus83/H3Landscape/blob/main/LICENSE",
+	"compatibility" :
+	{
+		"min" : "1.7.3"
+	},
+	"factions" :
+	{
+	    "hota.bulwark:bulwark" : { "town" : { "siege" : { "imagePrefix#override" : { "underground": "altTowns/sgbk", "surface": "hota/bulwark/town/siege/sgbk" } } } },
+	    "hota.cove:cove" : { "town" : { "siege" : { "imagePrefix#override" : { "underground": "altTowns/SGCV", "surface": "hota/cove/town/siege/SGCV" } } } },
+	    "hota.factory:factory" : { "town" : { "siege" : { "imagePrefix#override" : { "underground": "altTowns/SGFa", "surface": "hota/factory/siege/SGFa" } } } }
+	},
+	"battlefields" :
+	{
+	    // copied from VCMI (only graphics, limitToLayers and name is changed)
+	    "hota.terrainoverlays:cracked_ice": {
+		    "limitToLayers" : ["unknown", "surface"]
+	    },
+	    "cracked_ice_underground": {
+		    "graphics": "CmBkIceUg.png",
+		    "isSpecial" : true,
+		    "limitToLayers" : ["underground"],
+		    "bonuses" : [
+			    {
+				    "type" : "PRIMARY_SKILL",
+				    "subtype" : "defence",
+				    "val" : -5,
+				    "valueType" : "BASE_NUMBER",
+				    "propagator" : "BATTLE_WIDE"
+			    }
+		    ]
+	    },
+	    "hota.terrainoverlays:dunes" : {
+		    "limitToLayers" : ["unknown", "surface"]
+	    },
+	    "dunes_underground" : {
+		    "graphics" : "CmBkDunUg.png",
+		    "isSpecial" : true,
+		    "limitToLayers" : ["underground"],
+		    "bonuses" : [
+			    {
+				    "type" : "OPENING_BATTLE_SPELL",
+				    "subtype" : "quicksand",
+				    "val" : 4,
+				    "propagator" : "BATTLE_WIDE"
+			    }
+		    ]
+	    },
+	    "hota.terrainoverlays:fields_of_glory" : {
+		    "limitToLayers" : ["unknown", "surface"]
+	    },
+	    "fields_of_glory_underground" : {
+		    "graphics" : "CmBkFGUg.png",
+		    "isSpecial" : true,
+		    "limitToLayers" : ["underground"],
+		    "bonuses" : [
+			    {
+				    "type" : "LUCK",
+				    "val" : -2,
+				    "valueType" : "BASE_NUMBER",
+				    "propagator" : "BATTLE_WIDE"
+			    }
+		    ]
+	    },
+		"hota.wastelandterrain:wasteland_rocks": {
+		    "limitToLayers" : ["unknown", "surface"]
+		},
+		"wasteland_rocks_underground": {
+		    "limitToLayers" : ["underground"],
+		    "graphics" : "CmBkWlUg.png"
+		},
+		"hota.highlandsterrain:highlands_flowers": {
+		    "limitToLayers" : ["unknown", "surface"]
+		},
+		"highlands_flowers_underground": {
+		    "limitToLayers" : ["underground"],
+		    "graphics" : "CmBkFGrUg.png"
+		},
+	},
+	"objects" :
+	{
+	    "hota.terrainoverlays:crackedIce" : {
+		    "base" : { "battleground": [ "cracked_ice", "cracked_ice_underground" ] }
+	    },
+	    "hota.terrainoverlays:dunes" : {
+		    "types" : { "dunes" : { "battleground": [ "dunes", "dunes_underground" ] } }
+	    },
+	    "hota.terrainoverlays:fieldsOfGlory" : {
+		    "types" : { "fieldsOfGlory" : { "battleground": [ "fields_of_glory", "fields_of_glory_underground" ] } }
+	    },
+	},
+	"terrains" :
+	{
+	    "hota.wastelandterrain:wasteland" : {
+		    "battleFields": { "append": "wasteland_rocks_underground" }
+	    },
+	    "hota.highlandsterrain:highlands" : {
+		    "battleFields": { "append": "highlands_flowers_underground" }
+	    },
+	}
+}

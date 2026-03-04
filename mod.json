@@ -1,0 +1,317 @@
+{	
+	"name" : "H3Landscape",
+	"version" : "0.0.4",
+	"author" : "Paracelsus83",
+	"contact" : "https://github.com/Paracelsus83/H3Landscape",
+	"modType" : "Graphical",
+	"licenseName" : "MIT (only non OH3 assets)",
+	"licenseURL" : "https://github.com/Paracelsus83/H3Landscape/blob/main/LICENSE",
+	"compatibility" :
+	{
+		"min" : "1.7.2"
+	},
+	"changelog" : 
+	{ 
+		"0.0.4" : [ "Initial version based on 0.0.4" ]
+	},
+	"factions" :
+	{
+	    "core:castle" : { "town" : { "siege" : { "imagePrefix#override" : { "underground": "altTowns/SGCS", "surface": "SGCS" } } } },
+	    "core:conflux" : { "town" : { "siege" : { "imagePrefix#override" : { "underground": "altTowns/SGEL", "surface": "SGEL" } } } },
+	    "core:dungeon" : { "town" : { "siege" : { "imagePrefix#override" : { "underground": "SGDN", "surface": "altTowns/SGDN" } } } },
+	    "core:fortress" : { "town" : { "siege" : { "imagePrefix#override" : { "underground": "altTowns/SGFR", "surface": "SGFR" } } } },
+	    "core:inferno" : { "town" : { "siege" : { "imagePrefix#override" : { "underground": "altTowns/SGIN", "surface": "SGIN" } } } },
+	    "core:necropolis" : { "town" : { "siege" : { "imagePrefix#override" : { "underground": "altTowns/SGNC", "surface": "SGNC" } } } },
+	    "core:rampart" : { "town" : { "siege" : { "imagePrefix#override" : { "underground": "altTowns/SGRM", "surface": "SGRM" } } } },
+	    "core:stronghold" : { "town" : { "siege" : { "imagePrefix#override" : { "underground": "altTowns/SGST", "surface": "SGST" } } } },
+	    "core:tower" : { "town" : { "siege" : { "imagePrefix#override" : { "underground": "altTowns/SGTW", "surface": "SGTW" } } } },
+	},
+	"battlefields" :
+	{
+	    // copied from VCMI (only graphics, limitToLayers and name is changed)
+	    "core:clover_field": {
+		    "limitToLayers" : ["unknown", "surface"]
+	    },
+	    "clover_field_underground": {
+		    "graphics": "CmBkCFUg.png",
+		    "isSpecial" : true,
+		    "limitToLayers" : ["underground"],
+		    "bonuses": [
+			    {
+				    "type" : "LUCK",
+				    "val" : 2,
+				    "valueType" : "BASE_NUMBER",
+				    "description" : "@core.arraytxt.83",
+				    "limiters": [{ "type" : "CREATURE_ALIGNMENT_LIMITER", "alignment" : "neutral" }]
+			    }
+		    ]
+	    },
+	    "core:evil_fog": {
+		    "limitToLayers" : ["unknown", "surface"]
+	    },
+	    "evil_fog_underground": {
+		    "graphics": "CmBkEFUg.png",
+		    "isSpecial" : true,
+		    "limitToLayers" : ["underground"],
+		    "bonuses": [
+			    {
+				    "type" : "MORALE",
+				    "val" : -1,
+				    "valueType" : "BASE_NUMBER",
+				    "description" : "@core.arraytxt.126",
+				    "limiters": [{ "type" : "CREATURE_ALIGNMENT_LIMITER", "alignment" : "good" }]
+			    },
+			    {
+				    "type" : "MORALE",
+				    "val" : 1,
+				    "valueType" : "BASE_NUMBER",
+				    "description" : "@core.arraytxt.125",
+				    "limiters": [{ "type" : "CREATURE_ALIGNMENT_LIMITER", "alignment" : "evil" }]
+			    }
+		    ]
+	    },
+	    "core:fiery_fields": {
+		    "limitToLayers" : ["unknown", "surface"]
+	    },
+	    "fiery_fields_underground": {
+		    "graphics": "CmBkFFUg.png",
+		    "isSpecial" : true,
+		    "limitToLayers" : ["underground"],
+		    "bonuses": [
+			    {
+				    "type" : "MAGIC_SCHOOL_SKILL",
+				    "subtype" : "spellSchool.fire",
+				    "val" : 3,
+				    "valueType" : "BASE_NUMBER"
+			    }
+		    ]
+	    },
+	    "core:holy_ground": {
+		    "limitToLayers" : ["unknown", "surface"]
+	    },
+	    "holy_ground_underground": {
+		    "graphics": "CmBkHGUg.png",
+		    "isSpecial" : true,
+		    "limitToLayers" : ["underground"],
+		    "bonuses": [
+			    {
+				    "type" : "MORALE",
+				    "val" : 1,
+				    "valueType" : "BASE_NUMBER",
+				    "description" : "@core.arraytxt.123",
+				    "limiters": [{ "type" : "CREATURE_ALIGNMENT_LIMITER", "alignment" : "good" }]
+			    },
+			    {
+				    "type" : "MORALE",
+				    "val" : -1,
+				    "valueType" : "BASE_NUMBER",
+				    "description" : "@core.arraytxt.124",
+				    "limiters": [{ "type" : "CREATURE_ALIGNMENT_LIMITER", "alignment" : "evil" }]
+			    }
+		    ]
+	    },
+	    "core:rocklands": {
+		    "limitToLayers" : ["unknown", "surface"]
+	    },
+	    "rocklands_underground": {
+		    "graphics": "CmBkRkUg.png",
+		    "isSpecial" : true,
+		    "limitToLayers" : ["underground"],
+		    "bonuses": [
+			    {
+				    "type" : "MAGIC_SCHOOL_SKILL",
+				    "subtype" : "spellSchool.earth",
+				    "val" : 3,
+				    "valueType" : "BASE_NUMBER"
+			    }
+		    ]
+	    },
+	    "core:lucid_pools": {
+		    "limitToLayers" : ["unknown", "surface"]
+	    },
+	    "lucid_pools_underground": {
+		    "graphics": "CmBkLPUg",
+		    "isSpecial" : true,
+		    "limitToLayers" : ["underground"],
+		    "bonuses": [
+			    {
+				    "type" : "MAGIC_SCHOOL_SKILL",
+				    "subtype" : "spellSchool.water",
+				    "val" : 3,
+				    "valueType" : "BASE_NUMBER"
+			    }
+		    ]
+	    },
+	    "core:magic_clouds": {
+		    "limitToLayers" : ["unknown", "surface"]
+	    },
+	    "magic_clouds_underground": {
+		    "graphics": "CmBkMCUg.png",
+		    "isSpecial" : true,
+		    "limitToLayers" : ["underground"],
+		    "bonuses": [
+			    {
+				    "type" : "MAGIC_SCHOOL_SKILL",
+				    "subtype" : "spellSchool.air",
+				    "val" : 3,
+				    "valueType" : "BASE_NUMBER"
+			    }
+		    ]
+	    },
+	    "core:magic_plains": {
+		    "limitToLayers" : ["unknown", "surface"]
+	    },
+	    "magic_plains_underground": {
+		    "graphics": "CmBkMgUg.png",
+		    "isSpecial" : true,
+		    "limitToLayers" : ["underground"],
+		    "bonuses": [
+			    {
+				    "type" : "MAGIC_SCHOOL_SKILL",
+				    "subtype" : "spellSchool.any",
+				    "val" : 3,
+				    "valueType" : "BASE_NUMBER"
+			    }
+		    ]
+	    },
+	    "core:sand_mesas": {
+		    "limitToLayers" : ["unknown", "surface"]
+		},
+	    "sand_underground": {
+		    "limitToLayers" : ["underground"],
+		    "graphics" : "CmBkDesUg.png"
+		},
+		"core:swamp_trees": {
+		    "limitToLayers" : ["unknown", "surface"]
+		},
+		"swamp_underground": {
+		    "limitToLayers" : ["underground"],
+		    "graphics" : "CmBkSwUg.png"
+		},
+	    "core:snow_mountains": {
+		    "limitToLayers" : ["unknown", "surface"]
+		},
+	    "core:snow_trees": {
+		    "limitToLayers" : ["unknown", "surface"]
+		},
+	    "snow_underground": {
+		    "limitToLayers" : ["underground"],
+		    "graphics" : "CmBkSnUg.png"
+		},
+	    "core:dirt_birches": {
+		    "limitToLayers" : ["unknown", "surface"]
+		},
+	    "core:dirt_hills": {
+		    "limitToLayers" : ["unknown", "surface"]
+		},
+	    "core:dirt_pines": {
+		    "limitToLayers" : ["unknown", "surface"]
+		},
+	    "dirt_underground": {
+		    "limitToLayers" : ["underground"],
+		    "graphics" : "CmBkDrUg.png"
+		},
+	    "core:grass_hills": {
+		    "limitToLayers" : ["unknown", "surface"]
+		},
+	    "core:grass_pines": {
+		    "limitToLayers" : ["unknown", "surface"]
+		},
+	    "grass_underground": {
+		    "limitToLayers" : ["underground"],
+		    "graphics" : "CmBkGrUg.png"
+		},
+	    "core:rough": {
+		    "limitToLayers" : ["unknown", "surface"]
+		},
+	    "rough_underground": {
+		    "limitToLayers" : ["underground"],
+		    "graphics" : "CmBkRghUg.png"
+		},
+	    "core:subterranean": {
+		    "limitToLayers" : ["underground"]
+		},
+	    "subterranean_surface": {
+		    "limitToLayers" : ["unknown", "surface"],
+		    "graphics" : "CmBkRedMt.png"
+		},
+	    "core:lava":  {
+		    "limitToLayers" : ["unknown", "surface"]
+		},
+	    "lava_underground":  {
+		    "limitToLayers" : ["underground"],
+		    "graphics" : "CmBkLvUg.png"
+		},
+		"core:ship": {
+		    "limitToLayers" : ["unknown", "surface"]
+		},
+		"ship_underground": {
+		    "limitToLayers" : ["underground"],
+		    "isSpecial" : true,
+		    "graphics" : "CmBkDkUg.png"
+		},
+	},
+	"objects" :
+	{
+	    "core:cloverField" : {
+		    "types" : { "object" : { "battleground": [ "clover_field", "clover_field_underground" ] } }
+	    },
+	    "core:evilFog" : {
+		    "types" : { "object" : { "battleground": [ "evil_fog", "evil_fog_underground" ] } }
+	    },
+	    "core:fieryFields" : {
+		    "types" : { "object" : { "battleground": [ "fiery_fields", "fiery_fields_underground" ] } }
+	    },
+	    "core:holyGround" : {
+		    "types" : { "object" : { "battleground": [ "holy_ground", "holy_ground_underground" ] } }
+	    },
+	    "core:rocklands" : {
+		    "types" : { "object" : { "battleground": [ "rocklands", "rocklands_underground" ] } }
+	    },
+	    "core:lucidPools" : {
+		    "types" : { "object" : { "battleground": [ "lucid_pools", "lucid_pools_underground" ] } }
+	    },
+	    "core:magicClouds" : {
+		    "types" : { "object" : { "battleground": [ "magic_clouds", "magic_clouds_underground" ] } }
+	    },
+	    "core:magicPlains" : {
+		    "types" : { "object" : { "battleground": [ "magic_plains", "magic_plains_underground" ] } }
+	    },
+	    "core:magicPlainsDUPLICATE" : {
+		    "types" : { "object" : { "battleground": [ "magic_plains", "magic_plains_underground" ] } }
+	    },
+	},
+	"terrains" :
+	{
+	    "core:sand" : {
+		    "battleFields": { "append": "sand_underground" }
+	    },
+	    "core:swamp" : {
+		    "battleFields": { "append": "swamp_underground" }
+	    },
+	    "core:snow" : {
+		    "battleFields": { "append": "snow_underground" }
+	    },
+	    "core:dirt" : {
+		    "battleFields": { "append": "dirt_underground" }
+	    },
+	    "core:grass" : {
+		    "battleFields": { "append": "grass_underground" }
+	    },
+	    "core:rough" : {
+		    "battleFields": { "append": "rough_underground" }
+	    },
+	    "core:subterra" : {
+		    "battleFields": { "append": "subterranean_surface" }
+	    },
+	    "core:lava" : {
+		    "battleFields": { "append": "lava_underground" }
+	    },
+	    "core:water" : {
+		    "battleFields": { "append": "ship_underground" }
+	    },
+	    "core:rock" : {
+		    "battleFields": { "append": "rocklands_underground" }
+	    },
+	}
+}
