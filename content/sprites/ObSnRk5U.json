@@ -1,10 +1,10 @@
 {
-    "images": [
-        {
-            "group": 0,
-            "frame": 0,
-            "file": "ObSnRk5U.pcx.png"
-        }
-    ],
-    "basepath": "ObSnRk5U/"
+	"images" : [
+		{
+			"group" : 0,
+			"frame" : 0,
+			"file" : "ObSnRk5U.pcx.png"
+		}
+	],
+	"basepath" : "ObSnRk5U/"
 }
