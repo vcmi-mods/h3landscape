@@ -328,7 +328,7 @@
 			"limitToLayers" : [
 				"underground"
 			],
-			"graphics" : "CmBkDesUg.png"
+			"graphics" : "CmBkDeU.png"
 		},
 		"core:swamp_trees" : {
 			"limitToLayers" : [
