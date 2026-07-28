@@ -107,7 +107,6 @@
 		}
 	},
 	"battlefields" : {
-		// copied from VCMI (only graphics, limitToLayers and name is changed)
 		"core:clover_field" : {
 			"limitToLayers" : [
 				"unknown",
@@ -595,5 +594,10 @@
 				"append" : "rocklands_underground"
 			}
 		}
+	},
+	"polish" : {
+		"translations" : [
+			"translation/polish.json"
+		]
 	}
 }
